@@ -1,11 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom';
-import './App.css';
 import Gallery from './components/gallery/Gallery';
 import Battle from './components/battle/Battle';
 import Statistics from './components/statistics/Statistics';
 import History from './components/history/History';
 import Start from './components/start/Start';
+import { HamsterItem } from './types/HamsterItem';
+import './App.css';
+
+const hamsterData: HamsterItem[] = []
 
 function App() {
   return (
@@ -23,7 +26,7 @@ function App() {
 
 	  <main>
 		  <Switch>
-			  <Route path="/gallery"> <Gallery /> </Route>
+			  <Route path="/gallery" render={() => <Gallery items={hamsterData} /> }/>
 			  <Route path="/battle"> <Battle /> </Route>
 			  <Route path="/battel">
 				  <Redirect to="/battle" />

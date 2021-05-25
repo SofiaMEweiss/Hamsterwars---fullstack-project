@@ -44,6 +44,13 @@ app.get('/hamsters', (req, res) => {
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, '../build/index.html'))
 })
+
+// REST API för hamsters & matches
+// app.use('/hamsters', hamsters)
+// app.use('/matches', matches)
+// app.use('/matchWinners', matchWinners)
+// app.use('/winners', winners)
+// app.use('/losers', losers)
  
 //startar servern
 app.listen(PORT, () => {

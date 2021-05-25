@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
     res.send('Hello from server')
 })
 
-//Viktigt att denna ligger sist för den fångar alla övriga request.
+//Viktigt att denna ligger sist för den fångar alla övriga request (som /i frontend).
 // För att frontend routing ska fungera.
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, '../build/index.html'))

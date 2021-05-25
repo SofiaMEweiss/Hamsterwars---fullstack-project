@@ -32,6 +32,13 @@ app.get('/', (req, res) => {
     res.send('Hello from server')
 })
 
+//test
+const hamsters = ['hamstrar', 'hamstertest']
+
+app.get('/hamsters', (req, res) => {
+	res.send(hamsters)
+})
+
 //Viktigt att denna ligger sist för den fångar alla övriga request (som /i frontend).
 // För att frontend routing ska fungera.
 app.get('*', (req, res) => {

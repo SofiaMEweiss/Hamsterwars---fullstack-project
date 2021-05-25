@@ -1,8 +1,8 @@
 # Start project backend
-node backend\server.js
+node backend/server.js
 
 # Start project frontend
-npm run start
+npm run start-frontend-dev
 
 # Getting Started with Create React App
 

@@ -7,8 +7,8 @@ interface Props {
 }
 
 const Gallery = ({ items }: Props) => {
-	const [hamsters, setHamsters] = useState<null | string[]>(null)
-
+	const [hamsters, setHamsters] = useState<null | any[]>(null)
+	//Ändra any, funkar så länge, skapa inteface
 	useEffect(() => {
 		async function get() {
 	const response = await fetch('/hamsters', {method: 'GET'})
@@ -23,9 +23,9 @@ get()
 	return (
 	<div>
 		{hamsters ? hamsters.map(hamster =>(	
-		<div key={hamster}>
-			Bild på hamster<br/>
-			{hamster}<br/>
+		<div key={hamster.id}>
+			<img src={`img/${hamster.imgName}`}alt="hamster" /><br/>
+			{hamster.name}<br/>
 			<button>Mer info om hamster</button>
 		</div>
 		)) : 'Hämtar hamstrar från API'}

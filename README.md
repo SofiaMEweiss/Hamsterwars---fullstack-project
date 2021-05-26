@@ -1,5 +1,5 @@
 # Start project backend
-node backend/server.js
+npm run start
 
 # Start project frontend
 npm run start-frontend-dev

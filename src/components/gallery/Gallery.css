@@ -1,0 +1,19 @@
+.gallery-container {
+	border: 1px solid black;
+	padding: 1em;
+	margin: 1em;
+}
+.hamster-container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+img {
+	height: 20vh;
+}
+
+.hamstercard {
+	border: 1px solid black;
+	padding: 1em;
+	margin: 0.3em;
+}

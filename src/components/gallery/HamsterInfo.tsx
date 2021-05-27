@@ -1,12 +1,28 @@
 import React from 'react'
 import './Gallery.css';
+import {useState} from 'react'
 
 const HamsterInfo = () => {
+	const[isVisibleHamsterInfo, setIsVisibleHamsterInfo] = useState(false)
+
+	let maybeHamsterInfo = null
+	if ( isVisibleHamsterInfo ) {
+		maybeHamsterInfo = (<div><p>Hamster Bild</p>
+		<h2>Hamster Namn</h2></div>)
+	}
+
+	const toggleVisibility = () => {
+		setIsVisibleHamsterInfo( !isVisibleHamsterInfo )
+	}
+
 	return (
-	<div className="hamstercard">
-		<p>Hamster Bild</p>
-		<h2>Hamster Namn</h2>
-		<button>Mer info om Hamster</button>
+		<div className="hamstercard">
+	<div>
+		<button onClick={toggleVisibility}>{isVisibleHamsterInfo ? 'Visa mindre info' : 'Visa mer info'}</button>
+	</div>
+	<div>
+		{maybeHamsterInfo}
+		</div>
 	</div>
 	)
 }

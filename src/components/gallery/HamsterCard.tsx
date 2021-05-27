@@ -2,6 +2,8 @@ import React from 'react'
 import './Gallery.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import HamsterInfo from './HamsterInfo';
+
 
 const HamsterCard = () => {
 	const [hamsters, setHamsters] = useState<null | any[]>(null)
@@ -16,6 +18,8 @@ const HamsterCard = () => {
 }
 get()	
 	}, [])
+
+
 	
 	return (
 		<div className="hamster-container">
@@ -24,7 +28,7 @@ get()
 			<div className="hamstercard" key={hamster.id}>
 				<img src={`img/${hamster.imgName}`}alt="hamster" />
 				<h2>{hamster.name}</h2><br/>
-				<button>Mer info om hamster</button>
+				<HamsterInfo />
 			</div>
 			)) : 'Hämtar hamstrar från API'}
 			</div>

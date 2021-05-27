@@ -3,20 +3,21 @@ import './Gallery.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import HamsterInfo from './HamsterInfo';
+import { Hamster } from '../../types/Hamster'
 
 
 const HamsterCard = () => {
-	const [hamsters, setHamsters] = useState<null | any[]>(null)
+	const [hamsters, setHamsters] = useState<null | Hamster[]>(null)
 	//Ändra any, funkar så länge, skapa inteface
 	useEffect(() => {
-		async function get() {
+		async function getHamsters() {
 	const response = await fetch('/hamsters', {method: 'GET'})
-	const data: string[] = await response.json()
+	const data: Hamster[] = await response.json()
 	setHamsters(data)
 	//OBS! Bättre att hämta data i APP-komponenten, eftersom den alltid är MOUNTED.
 
 }
-get()	
+getHamsters()	
 	}, [])
 
 
@@ -24,11 +25,11 @@ get()
 	return (
 		<div className="hamster-container">
 			
-		{hamsters ? hamsters.map(hamster =>(	
-			<div className="hamstercard" key={hamster.id}>
-				<img src={`img/${hamster.imgName}`}alt="hamster" />
-				<h2>{hamster.name}</h2><br/>
-				<HamsterInfo />
+		{hamsters ? hamsters.map(h =>(	
+			<div className="hamstercard" key={h.id}>
+				<img src={`img/${h.imgName}`}alt="hamster" />
+				<h2>{h.name}</h2><br/>
+				<HamsterInfo hamster ={h}/>
 			</div>
 			)) : 'Hämtar hamstrar från API'}
 			</div>

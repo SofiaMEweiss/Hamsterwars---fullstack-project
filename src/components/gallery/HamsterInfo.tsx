@@ -1,14 +1,26 @@
 import React from 'react'
 import './Gallery.css';
 import {useState} from 'react'
+import { Hamster } from '../../types/Hamster'
 
-const HamsterInfo = () => {
+interface Props {
+	hamster: Hamster
+}
+
+const HamsterInfo = ({ hamster }: Props) => {
 	const[isVisibleHamsterInfo, setIsVisibleHamsterInfo] = useState(false)
 
 	let maybeHamsterInfo = null
 	if ( isVisibleHamsterInfo ) {
-		maybeHamsterInfo = (<div><p>Hamster Bild</p>
-		<h2>Hamster Namn</h2></div>)
+		maybeHamsterInfo = (
+		<div>
+	<p>Ålder: {hamster.age}</p>
+	<p>Favoritmat:{hamster.favFood}</p>
+	<p>Älskar: {hamster.loves}</p>
+	<p>Vinster: {hamster.wins}</p>
+	<p>Förluster: {hamster.defeats}</p>
+		<p>Matcher:{hamster.games}</p>
+		</div>)
 	}
 
 	const toggleVisibility = () => {

@@ -4,12 +4,25 @@ import './History.css';
 const History = () => {
 
     const [name, setName] = useState ('')
-	const [inputText2, setInputText2] = useState ('Hej')
+	const [age, setAge] = useState ('')
+	const [favFood, setFavFood] = useState ('')
+	const [loves, setLoves] = useState ('')
+	const [imgName, setImgName] = useState ('')
 
-	//Ändra till name sen
-	const [controlledText, setControlledText] = useState('')
-	const [controlledText2, setControlledText2] = useState('')
+	//const [inputText2, setInputText2] = useState ('Hej')
+
+	const [controlledName, setControlledName] = useState('')
+	const [controlledAge, setControlledAge] = useState('')
+	const [controlledFavFood, setControlledFavFood] = useState('')
+	const [controlledLoves, setControlledLoves] = useState('')
+	const [controlledImgName, setControlledImgName] = useState('')
+
+	//const [controlledText2, setControlledText2] = useState('')
 	const [nameTouched, setNameTouched] = useState(false)
+	const [ageTouched, setAgeTouched] = useState(false)
+	const [favFoodTouched, setFavFoodTouched] = useState(false)
+	const [lovesTouched, setLovesTouched] = useState(false)
+	const [imgNameTouched, setImgNameTouched] = useState(false)
 
 	let nameIsValid: boolean = true
 	let nameErrorMessage: string = ''
@@ -18,24 +31,77 @@ const History = () => {
 		nameErrorMessage = 'Vänligen skriv din hamsters namn'
 	}
 
+	const allowedAgeCharacters = "0123456789"
+	let ageIsValid: boolean = true
+	let ageErrorMessage: string = ''
+	if (age === '') {
+		ageIsValid = false
+		ageErrorMessage = 'Vänligen skriv din hamsters ålder'
+	} else if (!age.split('').every(char => allowedAgeCharacters.includes(char)))
+{ ageIsValid = false
+	ageErrorMessage ='Vänligen skriv din hamsters ålder med siffror' }
+
+	let favFoodIsValid: boolean = true
+	let favFoodErrorMessage: string = ''
+	if (favFood === '') {
+		favFoodIsValid = false
+		favFoodErrorMessage = 'Vänligen skriv din hamsters favoritmat'
+	}
+
+	let lovesIsValid: boolean = true
+	let lovesErrorMessage: string = ''
+	if (loves === '') {
+		lovesIsValid = false
+		lovesErrorMessage = 'Vänligen skriv vad din hamster älskar'
+	}
+
+	let imgNameIsValid: boolean = true
+	let imgNameErrorMessage: string = ''
+	if (imgName === '') {
+		imgNameIsValid = false
+		imgNameErrorMessage = 'Vänligen ange en URL till en bild på en hamster'
+	}
+
+
 
 	let nameClass = '';
 	if (nameTouched) {
 		nameClass = (nameIsValid ? 'valid' : 'error')
 	} 
+
+	let ageClass = '';
+	if (ageTouched) {
+		ageClass = (ageIsValid ? 'valid' : 'error')
+	} 
+
+	let favFoodClass = '';
+	if (favFoodTouched) {
+		favFoodClass = (favFoodIsValid ? 'valid' : 'error')
+	} 
+
+	let lovesClass = '';
+	if (lovesTouched) {
+		lovesClass = (lovesIsValid ? 'valid' : 'error')
+	} 
+
+	let imgNameClass = '';
+	if (imgNameTouched) {
+		imgNameClass = (imgNameIsValid ? 'valid' : 'error')
+	} 
 	
-	let formIsInvalid = !nameIsValid
+	let formIsInvalid = !nameIsValid || !ageIsValid || !favFoodIsValid || !lovesIsValid || !imgNameIsValid
 
     return (
     <div className="form">
+		<div className="form-section">
         <h1> Lägg till ny hamster </h1>
         <section>
              
-                <label> Namn: 
+                <label> Namn <br />
                 <input type="text" onBlur = {() => setNameTouched(true)} onChange={event =>{
                     console.log('Controlled change', event.target.value);
-					setName(event.target.value.toUpperCase())
-					setControlledText(event.target.value)
+					setName(event.target.value)
+					setControlledName(event.target.value)
 					//toUpperCase()
                 }}
                 value={name}
@@ -43,12 +109,77 @@ const History = () => {
                 />
                 </label>
 				{nameTouched ? 	<div className='message-hidden'>{nameErrorMessage}</div> : null }
-			
-				<br/>
-				Namn: {controlledText}
-            
 </section>
+
 <section>
+             
+                <label> Ålder <br />
+                <input type="text" onBlur = {() => setAgeTouched(true)} onChange={event =>{
+                    console.log('Controlled change', event.target.value);
+					setAge(event.target.value)
+					setControlledAge(event.target.value)
+					
+                }}
+                value={age}
+				className={ageClass}
+                />
+                </label>
+				{ageTouched ? 	<div className='message-hidden'>{ageErrorMessage}</div> : null }
+</section>
+
+<section>
+             
+			 <label> Favoritmat <br />
+			 <input type="text" onBlur = {() => setFavFoodTouched(true)} onChange={event =>{
+				 console.log('Controlled change', event.target.value);
+				 setFavFood(event.target.value)
+				 setControlledFavFood(event.target.value)
+				 
+			 }}
+			 value={favFood}
+			 className={favFoodClass}
+			 />
+			 </label>
+			 {favFoodTouched ? 	<div className='message-hidden'>{favFoodErrorMessage}</div> : null }
+</section>
+
+<section>
+             
+			 <label> Älskar <br />
+			 <input type="text" onBlur = {() => setLovesTouched(true)} onChange={event =>{
+				 console.log('Controlled change', event.target.value);
+				 setLoves(event.target.value)
+				 setControlledLoves(event.target.value)
+				 
+			 }}
+			 value={loves}
+			 className={lovesClass}
+			 />
+			 </label>
+			 {lovesTouched ? 	<div className='message-hidden'>{lovesErrorMessage}</div> : null }
+</section>
+
+<section>
+             
+			 <label> Bild <br />
+			 <input type="text" onBlur = {() => setImgNameTouched(true)} onChange={event =>{
+				 console.log('Controlled change', event.target.value);
+				 setImgName(event.target.value)
+				 setControlledImgName(event.target.value)
+				 
+			 }}
+			 value={imgName}
+			 className={imgNameClass}
+			 />
+			 </label>
+			 {imgNameTouched ? 	<div className='message-hidden'>{imgNameErrorMessage}</div> : null }
+</section>
+
+
+
+
+
+{/* <section>
 			 
                 <label> Ålder: 
                 <input type="number" className="valid" onChange={event =>{
@@ -65,9 +196,18 @@ const History = () => {
 
 			
 
-        </section>
+        </section> */}
 		<div>
 			<button disabled ={formIsInvalid}>Posta ny hamster</button>
+		</div>
+		</div>
+		<div className="form-section">
+		<h1> Din nya hamster </h1>
+		<p><span>Namn:</span> {controlledName}</p>
+		<p><span>Ålder:</span> {controlledAge}</p>
+		<p><span>Favoritmat:</span> {controlledFavFood}</p>
+		<p><span>Älskar:</span> {controlledLoves}</p>
+		<p><span>bild:</span><img src={controlledImgName} /></p>
 		</div>
     </div>
 )}

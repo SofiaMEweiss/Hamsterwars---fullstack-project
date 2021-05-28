@@ -16,6 +16,12 @@ const History = () => {
 	const [controlledFavFood, setControlledFavFood] = useState('')
 	const [controlledLoves, setControlledLoves] = useState('')
 	const [controlledImgName, setControlledImgName] = useState('')
+	// const [controlledWins] = useState(0)
+	// const [controlledDefeats] = useState(0)
+	// const [controlledGames, setControlledGames] = useState(0)
+
+
+
 
 	//const [controlledText2, setControlledText2] = useState('')
 	const [nameTouched, setNameTouched] = useState(false)
@@ -90,6 +96,37 @@ const History = () => {
 	} 
 	
 	let formIsInvalid = !nameIsValid || !ageIsValid || !favFoodIsValid || !lovesIsValid || !imgNameIsValid
+
+
+
+	async function postHamster() {
+        
+        const newHamster = {
+       
+			'name': controlledName,
+			'age': Number(controlledAge),
+			'favFood': controlledFavFood,
+			'loves': controlledLoves,
+			'imgName': controlledImgName,
+			'wins': 0,
+			'defeats': 0,
+			'games': 0
+        }
+		console.log("Upload hamster",newHamster)
+
+        const response = await fetch('/hamsters', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+			
+            body: JSON.stringify(newHamster)
+        })
+        
+        console.log(await response.text())
+    }
+
+
+
+
 
     return (
     <div className="form">
@@ -198,8 +235,10 @@ const History = () => {
 
         </section> */}
 		<div>
-			<button disabled ={formIsInvalid}>Posta ny hamster</button>
+			<button disabled ={formIsInvalid} onClick={postHamster}>Posta ny hamster</button>
 		</div>
+
+
 		</div>
 		<div className="form-section">
 		<h1> Din nya hamster </h1>

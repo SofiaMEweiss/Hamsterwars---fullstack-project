@@ -1,0 +1,49 @@
+:root {
+	--error-color: #CE2B1C;
+	--valid-color: #249919;
+}
+
+.form {
+	/* padding: 1em; */
+	border: 1px solid black;
+	text-align: left;
+}
+
+section {
+	margin: 1em;
+	border: 1px solid black
+}
+
+.form > section {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.form > section > * {
+	display:block;
+}
+
+.form label {
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+.form input {
+	font-size: 1.1em;
+	border-radius: 0.3em;
+	border-width: 3px;
+	padding-left: 0.5em; 
+}
+
+.form .message-hidden {
+	position: absolute;
+	color: var(--error-color);
+}
+
+.form .error {
+	border-color: var(--error-color);
+}
+
+.form .valid {
+	border-color: var(--valid-color);
+}

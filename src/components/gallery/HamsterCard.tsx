@@ -27,7 +27,10 @@ getHamsters()
 			
 		{hamsters ? hamsters.map(h =>(	
 			<div className="hamstercard" key={h.id}>
-				<img src={`img/${h.imgName}`}alt="hamster" />
+				{/* ifsats? */}
+				{(h.imgName.startsWith('http')) ? <img src={h.imgName}alt="hamster" />: <img src={`img/${h.imgName}`}alt="hamster" />}
+				{ /* <img src={`img/${h.imgName}`}alt="hamster" />
+				<img src={h.imgName}alt="hamster" /> */}
 				<h2>{h.name}</h2><br/>
 				<HamsterInfo hamster ={h}/>
 			</div>

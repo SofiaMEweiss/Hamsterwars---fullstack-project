@@ -22,7 +22,7 @@
 }
 
 header {
-	background-color: palevioletred;
+	background-color: white;
 	color: #282c34;
 	padding: 0.5em;
 	flex: 0 0 auto;
@@ -31,16 +31,27 @@ header {
 
 nav a {
 	padding: 0.2em 1.5em;
-	color: #282c34;
+	color: #FFB1B1;
 	transition: background-color 0.3s linear;
 	text-decoration: none;
 }
 
 nav a:hover {
-	background-color: darksalmon;
+	background-color: #3C00E5;
 }
 
 main {
-	background-color: pink;
+	background-color: white;
 	flex: 1 1 auto;
+	/* Den får skala om sig ganska fritt, den får ta resten av utrymmet. 1 1 -> flex grow flex shrink(växer över den storleken som den behöver, utgår ifrån den storleken den behöver (har man ett annat element med 2 2 auto så kommer den vara dubbelt så stor om de har samma innehåll) och auto så får den ta så mkt som den behöver.*/
 }
+
+.imghamster:hover {
+	transform: translateY(-10px);
+  }
+.imghamster {
+	width: 150px;
+	/* transition: all .5s ease-in-out; */
+	
+}
+

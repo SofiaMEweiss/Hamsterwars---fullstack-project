@@ -3,11 +3,11 @@ import './Nav.css';
 
 const Nav = () => (
 	<nav className="nav-container">
-		<Link to="/">Start</Link>
-		<Link to="/gallery">Galleri</Link>
-		<Link to="/battle">Tävla</Link>
-		<Link to="/statistics">Statestik</Link>
-		<Link to="/history">Historik</Link>
+		<Link to="/">Home</Link>
+		<Link to="/battle">Battle</Link>
+		<Link to="/gallery">Gallery</Link>
+		<Link to="/statistics">Top 5</Link>
+		<Link to="/history">All matches</Link>
 		<img src="./img/hamsterlogo.svg" alt="Logga med en arg hamster"/>
 	</nav>
 )

@@ -3,7 +3,8 @@
 	--valid-color: #249919;
 	--primary-color: #A15C64;
 	--secontary-color: #E5E5E5;
-	--font-family: 'Rock Salt', cursive;
+	--heading-font-family: 'Rock Salt', cursive;
+	--paragraph-font-familiy: 'Roboto', sans-serif;
 }
 
 * {

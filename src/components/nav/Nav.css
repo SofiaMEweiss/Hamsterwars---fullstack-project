@@ -1,0 +1,29 @@
+.nav-container {
+	display: flex;
+}
+
+.nav-container a {
+	padding: 0.2em 1.5em;
+	font-family: var(--paragraph-font-familiy);
+	color: var(--primary-color);
+	font-size: 1.8em;
+	font-weight:300;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	/* transition: background-color 0.3s linear; */
+}
+
+.nav-container a:hover {
+	/* background-color: var(--primary-color); */
+	color: var(--secontary-color);
+}
+
+.nav-container img:hover {
+	transform: rotate(360deg)
+}
+
+.nav-container img {
+	width: 1.7em;
+	transition: all .5s ease-in-out;
+}

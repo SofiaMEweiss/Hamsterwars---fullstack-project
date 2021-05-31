@@ -1,7 +1,7 @@
 .start-container {
 	display: flex;
 	flex: 1 1 auto;
-	background-color: black;
+	background-color: var(--background-color);
 	/* border: red solid 1px; */
 	}
 
@@ -10,6 +10,7 @@
 	flex-direction: column;
 	justify-content: center;
 	margin: 0px;
+	border: 0;
 	/* border: green solid 1px; */
 }
 

@@ -1,11 +1,32 @@
+:root {
+	--error-color: #CE2B1C;
+	--valid-color: #249919;
+	--primary-color: #A15C64;
+	--secontary-color: #E5E5E5;
+	--font-family: 'Rock Salt', cursive;
+}
+
+* {
+	margin: 0px;
+}
+
 body {
   margin: 0;
   /* padding: 1em; */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  /* font-family: 'Bad Script', cursive; */
+  @font-face {
+	  font-family: "Bad Script";
+	  src: local("Bad Script"),
+	  url("./fonts/BadScript-Regular.ttf")
+	  format("turetype");
+	  font-weight: cursive;
+
+  }
 }
 
 code {

@@ -1,8 +1,9 @@
 .App {
-  text-align: center;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Bad Script', cursive;
 }
 
 
@@ -42,16 +43,20 @@ nav a:hover {
 
 main {
 	background-color: white;
+	border: blue solid 1px;
 	flex: 1 1 auto;
+	display: flex;
 	/* Den får skala om sig ganska fritt, den får ta resten av utrymmet. 1 1 -> flex grow flex shrink(växer över den storleken som den behöver, utgår ifrån den storleken den behöver (har man ett annat element med 2 2 auto så kommer den vara dubbelt så stor om de har samma innehåll) och auto så får den ta så mkt som den behöver.*/
 }
 
 .imghamster:hover {
 	transform: translateY(-10px);
+	transform: rotate(30deg)
   }
 .imghamster {
 	width: 150px;
 	/* transition: all .5s ease-in-out; */
+	transition: transform 1s ease-out;
 	
 }
 

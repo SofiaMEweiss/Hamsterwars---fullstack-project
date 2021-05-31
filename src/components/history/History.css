@@ -1,7 +1,4 @@
-:root {
-	--error-color: #CE2B1C;
-	--valid-color: #249919;
-}
+
 
 .form {
 	/* padding: 1em; */
@@ -58,6 +55,7 @@ section {
 	cursor: pointer;
 	background-color: #67ABEC;
 	transform: translateY(-4px);
+	/* transform: translate(0px, -4px) scale(1.1) */
 }
 
 .form button {
@@ -65,7 +63,7 @@ section {
 	font-size: 1.3em;
 	border-radius: 0.5em;
 	padding: 0.5em 1.4em;
-	transition: all 0.5s;
+	transition: all 1s;
 }
 
 .form button:disabled {

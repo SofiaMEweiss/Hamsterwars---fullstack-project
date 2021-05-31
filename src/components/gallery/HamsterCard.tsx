@@ -1,7 +1,7 @@
 import React from 'react'
 import './Gallery.css';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+// import { useState } from 'react';
 import HamsterInfo from './HamsterInfo';
 import { Hamster } from '../../types/Hamster'
 

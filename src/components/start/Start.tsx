@@ -1,12 +1,20 @@
+import './Start.css';
+
 const Start = () => (
-	<div>
-		<h1>Välkommen till Hamsterwars</h1>
+	<div className="start-container">
+		<section>
+		<p>This is </p>
+		<h1>Hamster Wars</h1>
 
-		A long time ago in a galaxy far, far away....
+		<p>A long time ago in a galaxy far, far away....
 
-		Inleddes det stora kriget om den bästa hamstern och det pågår än idag. Det handlade inte om styrka, intelligens eller ens snabbhet. Det är helt och hållet den sötaste som kommer klättra till toppen. 
+The great battle of the greatest hamster begun.
+It was neither about strength, intelligence or even swiftness.
+Climbing to the top would simply be dependant on one thing.
+Which hamster was the cutest hamster of them all?</p>
 
-		Din uppgift är att välja vem som ska gå segrande ur HAMSTER WARS!
+<h2>It’s all up to you Human, to decide which Hamster will prevail in Hamster Wars!</h2>
+</section>
 	</div>
 )
 

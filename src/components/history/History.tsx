@@ -112,7 +112,6 @@ const History = () => {
 			'defeats': 0,
 			'games': 0
         }
-		console.log("Upload hamster",newHamster)
 
         const response = await fetch('/hamsters', {
             method: 'POST',
@@ -121,7 +120,6 @@ const History = () => {
             body: JSON.stringify(newHamster)
         })
         
-        console.log(await response.text())
     }
 
 

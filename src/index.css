@@ -2,7 +2,8 @@
 	--error-color: #CE2B1C;
 	--valid-color: #249919;
 	--primary-color: #A15C64;
-	--secontary-color: #E5E5E5;
+	--secontary-color: #d6d6d6;
+	--hover-color: #9b4d56;
 	--heading-font-family: 'Rock Salt', cursive;
 	--paragraph-font-familiy: 'Roboto', sans-serif;
 }
@@ -20,14 +21,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   /* font-family: 'Bad Script', cursive; */
-  @font-face {
+  /* @font-face {
 	  font-family: "Bad Script";
 	  src: local("Bad Script"),
 	  url("./fonts/BadScript-Regular.ttf")
 	  format("turetype");
 	  font-weight: cursive;
 
-  }
+  } */
 }
 
 code {

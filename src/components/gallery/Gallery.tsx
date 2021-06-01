@@ -1,18 +1,13 @@
 import React from 'react'
 import './Gallery.css';
 import HamsterCard from './HamsterCard';
-import { Link } from 'react-router-dom';
+import GalleryHeader from './GalleryHeader';
 
-const Gallery = () => {
-	return (
-<main className="gallery-container">
-	<div className="gallery-header"><h1>So many cuties</h1>
-	<Link to="/addnewhamster">
-				<button>Add new hamster</button>
-			</Link></div>
-	<HamsterCard />
+const Gallery = () => (
+	<main className="gallery-container">
+		<GalleryHeader />
+		<HamsterCard />
 	</main>
-	)
-}
+)
 
 export default Gallery;

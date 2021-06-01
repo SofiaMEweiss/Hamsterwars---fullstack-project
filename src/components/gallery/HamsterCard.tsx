@@ -40,9 +40,7 @@ getHamsters()
 				{ /* <img src={`img/${h.imgName}`}alt="hamster" />
 				<img src={h.imgName}alt="hamster" /> */}
 				<h2>{h.name}</h2><br/>
-				{/* <form> */}
 					<button onClick={() => removeHamster(h.id)}>Remove</button>
-				{/* </form> */}
 				<HamsterInfo hamster ={h}/>
 			</div>
 			)) : 'Hämtar hamstrar från API'}

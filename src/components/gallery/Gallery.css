@@ -9,24 +9,10 @@
 	background-color: var(--background-color);
 }
 
-.gallery-header {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	border: pink solid 1px;
-	padding: 5%;
-	color: var(--primary-color);
-	justify-content: space-between;
-}
-
-.gallery-container h1 {
-	border: red solid 1px;
-	text-align: center;
-}
 
 .hamster-container {
 	display: grid;
-	/* gap: 0% 2%; */
+	/* gap: 1% 2%; */
 	grid-template-columns: repeat(4, 1fr);
 	border: yellow solid 1px;
 	
@@ -46,4 +32,6 @@
 	/* justify-content: center; */
 	/* justify-content: center; */
 	align-items: center;
+	background-color: var(--primary-color);
+	border-radius: 2em;
 }

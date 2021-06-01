@@ -8,6 +8,7 @@ import Start from './components/start/Start';
 import Nav from './components/nav/Nav';
 import './App.css';
 import './index.css';
+import AddNewHamster from './components/gallery/AddNewHamster';
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 						</Route>
 			  			<Route path="/statistics"> <Statistics /> </Route>
 			  			<Route path="/history"> <History /> </Route>
+						  <Route path="/addnewhamster"> <AddNewHamster /> </Route>
 			  			<Route path="/"> <Start /> </Route>
 		  			</Switch>
 	  			</main>

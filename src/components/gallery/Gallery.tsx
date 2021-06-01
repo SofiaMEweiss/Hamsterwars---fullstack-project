@@ -1,13 +1,15 @@
 import React from 'react'
 import './Gallery.css';
 import HamsterCard from './HamsterCard';
-
-import AddNewHamster from './AddNewHamster';
+import { Link } from 'react-router-dom';
 
 const Gallery = () => {
 	return (
 <main className="gallery-container">
-	<h1>Välkommen till galleriet</h1>
+	<div className="gallery-header"><h1>So many cuties</h1>
+	<Link to="/addnewhamster">
+				<button>Add new hamster</button>
+			</Link></div>
 	<HamsterCard />
 	</main>
 	)

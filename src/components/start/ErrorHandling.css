@@ -4,7 +4,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: var(--secontary-color);
+	color: var(--secondary-color);
 	/* border: blue solid 1px; */
 }
 
@@ -25,7 +25,7 @@
 	border-radius: 5em;
 	border: none;
 	background-color: var(--primary-color);
-	color: var(--secontary-color);
+	color: var(--secondary-color);
 	font-family: var(--heading-font-family);
 	font-size: 1.4em;
 	font-weight: lighter;

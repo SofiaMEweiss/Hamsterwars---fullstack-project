@@ -16,7 +16,7 @@
 
 .nav-container a:hover {
 	/* background-color: var(--primary-color); */
-	color: var(--secontary-color);
+	color: var(--secondary-color);
 }
 
 .nav-container img:hover {

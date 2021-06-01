@@ -1,0 +1,19 @@
+.hamster-info-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* border: black solid 1px; */
+}
+
+.hamster-info-container button {
+	margin-bottom: 1em;
+}
+
+.hamster-info p {
+	margin-bottom: 1em;
+	font-family: var(--paragraph-font-familiy);
+}
+
+.hamster-info span {
+	font-weight: bold;
+}

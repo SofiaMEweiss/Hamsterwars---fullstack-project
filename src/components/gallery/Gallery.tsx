@@ -1,7 +1,7 @@
 import React from 'react'
-import './Gallery.css';
-import HamsterCard from './HamsterCard';
 import GalleryHeader from './GalleryHeader';
+import HamsterCard from './HamsterCard';
+import './Gallery.css';
 
 const Gallery = () => (
 	<main className="gallery-container">

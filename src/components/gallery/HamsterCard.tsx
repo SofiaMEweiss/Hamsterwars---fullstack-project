@@ -1,8 +1,8 @@
 import React from 'react'
-import './HamsterCard.css';
 import { useEffect, useState } from 'react';
-import HamsterInfo from './HamsterInfo';
 import { Hamster } from '../../types/Hamster'
+import HamsterInfo from './HamsterInfo';
+import './HamsterCard.css';
 
 const HamsterCard = () => {
 	const [hamsters, setHamsters] = useState<null | Hamster[]>(null)
@@ -27,12 +27,10 @@ const HamsterCard = () => {
 			{hamsters ? 
 			hamsters.map(h =>(	
 			<section className="hamstercard" key={h.id}>
-				<button onClick={() => removeHamster(h.id)}>
-					Remove Hamster
-				</button>
+				<img className="delete-hamster" onClick={() => removeHamster(h.id)} src="./img/remove.svg" alt="Bild av ett delete kryss"/>
 				{(h.imgName.startsWith('http')) ? 
-				<img src={h.imgName}alt="hamster" />
-				: <img src={`img/${h.imgName}`}alt="hamster" />}
+				<img className="hamstercard-img" src={h.imgName}alt="hamster" />
+				: <img className="hamstercard-img" src={`img/${h.imgName}`}alt="hamster" />}
 				<h3>
 					{h.name}
 				</h3>

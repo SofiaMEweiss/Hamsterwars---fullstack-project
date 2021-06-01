@@ -1,41 +1,41 @@
 import React from 'react'
-import './Gallery.css';
 import {useState} from 'react'
 import { Hamster } from '../../types/Hamster'
+import './HamsterInfo.css';
 
 interface Props {
 	hamster: Hamster
 }
 
 const HamsterInfo = ({ hamster }: Props) => {
-	const[isVisibleHamsterInfo, setIsVisibleHamsterInfo] = useState(false)
+	const[showHamsterInfo, setShowHamsterInfo] = useState(false)
 
 	let maybeHamsterInfo = null
-	if ( isVisibleHamsterInfo ) {
+
+	if ( showHamsterInfo ) {
 		maybeHamsterInfo = (
-		<div>
-	<p>Ålder: {hamster.age}</p>
-	<p>Favoritmat:{hamster.favFood}</p>
-	<p>Älskar: {hamster.loves}</p>
-	<p>Vinster: {hamster.wins}</p>
-	<p>Förluster: {hamster.defeats}</p>
-		<p>Matcher:{hamster.games}</p>
-		</div>)
+			<div className="hamster-info" >
+				<p><span>Age:</span> {hamster.age}</p>
+				<p><span>Favorite food:</span> {hamster.favFood}</p>
+				<p><span>Loves:</span> {hamster.loves}</p>
+				<p><span>Wins:</span> {hamster.wins}</p>
+				<p><span>Defeats:</span> {hamster.defeats}</p>
+				<p><span>Games:</span> {hamster.games}</p>
+			</div>
+		)
 	}
 
 	const toggleVisibility = () => {
-		setIsVisibleHamsterInfo( !isVisibleHamsterInfo )
+		setShowHamsterInfo( !showHamsterInfo )
 	}
 
 	return (
-		<div className="hamstercard">
-	<div>
-		<button onClick={toggleVisibility}>{isVisibleHamsterInfo ? 'Visa mindre info' : 'Visa mer info'}</button>
-	</div>
-	<div>
-		{maybeHamsterInfo}
+		<div className="hamster-info-container">
+				<button onClick={toggleVisibility}>
+					{showHamsterInfo ? 'Show less info' : 'Show more info'}
+				</button>
+				{maybeHamsterInfo}
 		</div>
-	</div>
 	)
 }
 

@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import './History.css';
+import './AddNewHamster.css';
 	 
 const AddNewHamster = () => {
 	
@@ -114,9 +114,9 @@ const AddNewHamster = () => {
 	}
 	
 	return (
-		<div className="form">
-			<div className="form-section">
-				<h1> Lägg till ny hamster </h1>
+		<div className="add-new-hamster-container">
+			<div className="form-container">
+				<h3>Add a new hamster </h3>
 				<section>
 			 		<label>Name <br />
 					<input type="text" onBlur = {() => setNameTouched(true)} onChange={event =>{
@@ -208,29 +208,29 @@ const AddNewHamster = () => {
 					}
 				</section>
 				<div>
-					<button disabled ={formIsInvalid} onClick={postHamster}>Posta ny hamster</button>
+					<button disabled ={formIsInvalid} onClick={postHamster}>Add new champion</button>
 				</div>
 			</div>
-			<div className="form-section">
-				<h1> Din nya hamster </h1>
+			<div className="preview-container">
+				<h3>Your new champion</h3>
 				<p>
-					<span>Namn:</span> 
+					<span>Namn: </span> 
 					{controlledName}
 				</p>
 				<p>
-					<span>Ålder:</span>
+					<span>Ålder: </span>
 					{controlledAge}
 					</p>
 				<p>
-					<span>Favoritmat:</span> 
+					<span>Favoritmat: </span> 
 					{controlledFavFood}
 				</p>
 				<p>
-					<span>Älskar:</span> 
+					<span>Älskar: </span> 
 					{controlledLoves}
 				</p>
 				<p>
-					<span>bild:</span>
+					{/* <span>bild: </span> */}
 					<img src={controlledImgName}/>
 				</p>
 			</div>

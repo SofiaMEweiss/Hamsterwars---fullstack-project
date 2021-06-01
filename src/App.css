@@ -25,6 +25,8 @@ header {
 main {
 	display: flex;
 	flex: 1 1 auto;
+	justify-content: center;
+	background-color: var(--background-color);
 	/* Den får skala om sig ganska fritt, den får ta resten av utrymmet. 1 1 -> flex grow flex shrink(växer över den storleken som den behöver, utgår ifrån den storleken den behöver (har man ett annat element med 2 2 auto så kommer den vara dubbelt så stor om de har samma innehåll) och auto så får den ta så mkt som den behöver.*/
 }
 

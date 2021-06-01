@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Hamster } from '../../types/Hamster'
 import ErrorHandling from './ErrorHandling';
@@ -8,21 +7,21 @@ import './Start.css';
 const Start = () => { 
 
 	const [hamsters, setHamsters] = useState<null | any[]>(null)
+
 	useEffect(() => {
 		async function get() {
-	const response = await fetch('/hamsters', {method: 'GET'})
-	const data: string[] = await response.json()
-	setHamsters(data)
-}
-get()	
-	}, [])	
+		const response = await fetch('/hamsters', {method: 'GET'})
+		const data: string[] = await response.json()
+		setHamsters(data)
+		}
+		get()	
+	}, 
+	[])	
 	
 	return (
-	<div className="start-wrapper">
-		{hamsters ? 
-		<StartContent/> : <ErrorHandling/> }
-	</div> 
-
+		<div className="start-wrapper">
+			{ hamsters ? <StartContent/> : <ErrorHandling/> }
+		</div> 
 	) 
 }
 

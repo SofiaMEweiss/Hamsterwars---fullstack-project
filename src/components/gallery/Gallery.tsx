@@ -4,10 +4,10 @@ import HamsterCard from './HamsterCard';
 import './Gallery.css';
 
 const Gallery = () => (
-	<main className="gallery-container">
+	<div className="gallery-container">
 		<GalleryHeader />
 		<HamsterCard />
-	</main>
+	</div>
 )
 
 export default Gallery;

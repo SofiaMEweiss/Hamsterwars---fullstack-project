@@ -7,6 +7,24 @@
 
 .hamster-info-container button {
 	margin-bottom: 1em;
+
+
+	width: 13em;
+	padding: 0.8em 1.2em;
+	margin-top: 1em;
+	border-radius: 2em;
+	border: none;
+	background-color: var(--background-color);
+	color: var(--secondary-color);
+	font-family: var(--paragraph-font-familiy);
+	font-size: 1em;
+	font-weight: lighter;
+}
+
+.hamster-info-container button:hover {
+	background-color: var(--hover-color);
+	cursor: pointer;
+	transform: translateY(-4px);
 }
 
 .hamster-info p {
@@ -17,3 +35,5 @@
 .hamster-info span {
 	font-weight: bold;
 }
+
+

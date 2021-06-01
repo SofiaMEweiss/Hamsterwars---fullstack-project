@@ -8,9 +8,9 @@
 	grid-template-columns: repeat(5, 1fr);
 }
 
-/* img {
+.gallery-container img {
 	height: 20vh;
-} */
+}
 
 .hamstercard {
 	/* border: 1px solid black; */

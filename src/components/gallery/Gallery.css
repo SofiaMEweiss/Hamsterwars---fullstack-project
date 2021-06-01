@@ -4,34 +4,8 @@
 	/* margin: 1em; */
 	display: flex;
 	flex-direction: column;
-	border: blue solid 1px;
+	/* border: blue solid 1px; */
 	padding: 0px 5%;
 	background-color: var(--background-color);
 }
 
-
-.hamster-container {
-	display: grid;
-	/* gap: 1% 2%; */
-	grid-template-columns: repeat(4, 1fr);
-	border: yellow solid 1px;
-	
-}
-
-.gallery-container img {
-	height: 20vh;
-}
-
-.hamstercard {
-	/* border: 1px solid black; */
-	padding: 1em;
-	margin: 0.3em;
-	border: red solid 1px;
-	display: flex;
-	flex-direction: column;
-	/* justify-content: center; */
-	/* justify-content: center; */
-	align-items: center;
-	background-color: var(--primary-color);
-	border-radius: 2em;
-}

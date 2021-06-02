@@ -10,6 +10,9 @@ const Battle = () => {
 	const [randomHamster2, setRandomHamster2] = useState<null | Hamster>(null)
 	// const [winner, setWinner] = useState<null | Hamster>(null)
 	const[allInfoIsVisible, setAllInfoIsVisible] = useState(false)
+	const[winnerLeft, setWinnerLeft] = useState(false)
+	const[winnerRight, setWinnerRight] = useState(false)
+
 		
 	useEffect(() => {
 		async function getRandomHamster(random:any) {
@@ -50,6 +53,33 @@ const Battle = () => {
 		})	
 	}
 
+	async function postMatchLeft() {
+		if (!randomHamster || !randomHamster2) return
+		const newMatch = {
+			'winnerId': randomHamster.id,
+			'loserId': randomHamster2.id
+		}
+	
+		const response = await fetch('/matches', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(newMatch)
+		})	
+	}
+
+	async function postMatchRight() {
+		if (!randomHamster || !randomHamster2) return
+		const newMatch = {
+			'winnerId': randomHamster2.id,
+			'loserId': randomHamster.id
+		}
+	
+		const response = await fetch('/matches', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(newMatch)
+		})	
+	}
 		//Steg 1 - visa wins & defeat
 		//Steg 2 - anropa update-funktion för winner som uppdatera wins & defeats
 		//Steg 2b - uppdatera frontenden med uppdateringen av wins/defeats
@@ -59,25 +89,27 @@ const Battle = () => {
 		const randomHamsterLeft = () => {
 			if (!randomHamster || !randomHamster2) return
 			setAllInfoIsVisible( true )
+			setWinnerRight ( true )
 			let winner = { ...randomHamster, wins: randomHamster.wins +1, games: randomHamster.games +1 }
 			let loser = { ...randomHamster2, defeats:  randomHamster.defeats +1, games: randomHamster.games +1 }
 			setRandomHamster(winner)
 			setRandomHamster2(loser)
 			putWinnerHamster(randomHamster)
 			putLoserHamster(randomHamster2)
+			postMatchLeft()
 		}
 
 		const randomHamsterRight = () => {
 			if (!randomHamster2 || !randomHamster) return
 			setAllInfoIsVisible( true )
+			setWinnerLeft ( true )
 			let winner = { ...randomHamster2, wins: randomHamster.wins +1, games: randomHamster.games +1 }
 			let loser = { ...randomHamster, defeats:  randomHamster.defeats +1, games: randomHamster.games +1 }
 			setRandomHamster2(winner)
 			setRandomHamster(loser)
 			putWinnerHamster(randomHamster2)
 			putLoserHamster(randomHamster)
-			
-			console.log(winner, loser);
+			postMatchRight()
 		}
 
 	return (
@@ -108,6 +140,9 @@ const Battle = () => {
 						</p> 
 						<p>
 							<span>Defeats:</span> {randomHamster.defeats}
+						</p>
+						<p>
+						{winnerLeft ? 'LOSER' : 'WINNER'}
 						</p>
 					</div>
 					: ''}
@@ -142,6 +177,9 @@ const Battle = () => {
 						</p> 
 						<p>
 							<span>Defeats:</span> {randomHamster2.defeats}
+						</p>
+						<p>
+						{winnerRight ? 'LOSER' : 'WINNER'}
 						</p>
 					</div>
 					: ''}

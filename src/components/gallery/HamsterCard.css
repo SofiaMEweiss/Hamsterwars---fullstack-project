@@ -24,7 +24,7 @@
 }
 
 .hamster-container .hamstercard-img {
-	height: 20vh;
+	height: 15vh;
 	border-radius: 1em;
 	border: var(--background-color) solid 2px;
 }

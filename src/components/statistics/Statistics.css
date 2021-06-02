@@ -1,0 +1,65 @@
+.statistics-container {
+	display: grid;
+	grid-template-columns: repeat(2 1fr);
+	padding: 0px 10%;
+	background-color: var(--background-color);
+	/* border: blue solid 1px; */
+}
+
+
+.winner-container {
+	/* display: grid;
+	grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr ; */
+	/* border: yellow solid 1px; */
+	margin: 0px 5em;
+}
+
+.top-fivecard {
+	display: flex;
+	flex-direction: column;
+	
+	align-items: center;
+	margin: 2em;
+	padding: 1em;
+	border-radius: 2em;
+	background-color: var(--primary-color);
+	/* border: red solid 2px; */
+}
+
+.winner-container .winner-img {
+	height: 13vh;
+	border-radius: 1em;
+	border: var(--background-color) solid 2px;
+	margin-top: 1em;
+	/* border: purple solid 1px; */
+}
+
+.winner-container h3 {
+		font-family: var(--heading-font-family);
+		color: var(--primary-color);
+		font-size: 2em;
+		font-weight: lighter;
+		text-transform: uppercase;	
+		text-align: center;
+}
+
+.winner-container h4 {
+	font-family: var(--heading-font-family);
+	color: var(--background-color);
+	font-size: 2em;
+	font-weight: lighter;
+	text-transform: uppercase;	
+}
+
+.winner-container p {
+	font-family: var(--paragraph-font-familiy);
+	color: var(--background-color);
+	margin-bottom: 1em;
+
+}
+
+.winner-container span {
+	font-weight: bold;
+}
+

@@ -231,7 +231,7 @@ const AddNewHamster = () => {
 				</p>
 				<p>
 					{/* <span>bild: </span> */}
-					<img src={controlledImgName}/>
+					<img src={controlledImgName} />
 				</p>
 			</div>
 		</div>

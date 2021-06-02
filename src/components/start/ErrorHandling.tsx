@@ -2,12 +2,12 @@ import './ErrorHandling.css';
 
 const ErrorHandling = () => (
 	<div className="error-container">
-		<img src="./img/errorhamster.svg" alt="En bild på en hamster med kors till ögon"/>
+		<img src="./img/errorhamster.svg" alt="Image of a hamster with crosses as eyes"/>
 		<p>
-			Tyvärr gick det inte att hämta några hamstrar från databasen. <br/> Försök att ladda om sidan igen eller testa att besöka oss vid ett senare tillfälle.
+		Unfortunately it was not possible to retrieve any hamsters from the database. <br/> Try to reload the page or visit us at a later time.
 		</p> 
 		<button onClick={() => window.location.reload()}>
-			Försök igen
+			Try again
 		</button>
 	</div>
 )

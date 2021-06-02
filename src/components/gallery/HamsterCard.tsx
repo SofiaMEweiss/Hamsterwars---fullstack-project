@@ -19,7 +19,8 @@ const HamsterCard = () => {
 
 	async function removeHamster(id:string) {
 		await fetch("/hamsters/" + id, { method: 'DELETE' })
-		window.location.reload()
+		// window.location.reload() //Dålig lösning
+		getHamsters()
 	}
 
 	return (
@@ -27,10 +28,10 @@ const HamsterCard = () => {
 			{hamsters ? 
 			hamsters.map(h =>(	
 			<section className="hamstercard" key={h.id}>
-				<img className="delete-hamster" onClick={() => removeHamster(h.id)} src="./img/remove.svg" alt="Bild av ett delete kryss"/>
+				<img className="delete-hamster" onClick={() => removeHamster(h.id)} src="./img/remove.svg" alt="Image of a delete cross"/>
 				{(h.imgName.startsWith('http')) ? 
-				<img className="hamstercard-img" src={h.imgName}alt="hamster" />
-				: <img className="hamstercard-img" src={`img/${h.imgName}`}alt="hamster" />}
+				<img className="hamstercard-img" src={h.imgName} alt="Image of a hamster" />
+				: <img className="hamstercard-img" src={`img/${h.imgName}`} alt="Image of a hamster" />}
 				<h3>
 					{h.name}
 				</h3>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Gallery from './components/gallery/Gallery';
 import Battle from './components/battle/Battle';
 import Statistics from './components/statistics/Statistics';

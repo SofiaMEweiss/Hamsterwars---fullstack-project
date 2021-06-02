@@ -3,13 +3,11 @@
 	flex-direction: column;
 	padding: 0px 10%;
 	background-color: var(--background-color);
-	/* border: blue solid 1px; */
 }
 
 .battle-hamster-container{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	/* border: green solid 1px; */
 }
 
 .battle-hamster-container div {
@@ -20,14 +18,12 @@
 	padding: 1em;
 	border-radius: 2em;
 	background-color: var(--primary-color);
-	/* border: red solid 1px; */
 }
 
 .battle-hamster-container .vs-container {
 	justify-content: flex-start;
 	background-color: var(--background-color);
 	color: var(--primary-color);
-	/* border: yellow solid 1px; */
 }
 
 .battle-hamster-container button {
@@ -57,7 +53,6 @@
 	text-transform: uppercase;
 }
 
-
 .battle-hamster-container img {
 	height: 20vh;
 	border-radius: 1em;
@@ -84,3 +79,9 @@
 	color: var(--background-color);
 }
 
+.battle-error-message {
+	justify-content: center;
+	font-family: var(--paragraph-font-familiy);
+	color: var(--background-color);
+	font-weight: bold;
+}

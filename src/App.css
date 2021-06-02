@@ -11,7 +11,6 @@
 	align-items: flex-end;
 	justify-content: center;
 	padding: 0.5em;
-	/* font-size: calc(10px + 2vmin); */
 	/*Den ska ha den storlek den behöver = auto, men den ska inte kunna ändra storlek = 0 0*/
 }
 

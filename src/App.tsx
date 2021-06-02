@@ -6,12 +6,15 @@ import Statistics from './components/statistics/Statistics';
 import History from './components/history/History';
 import Start from './components/start/Start';
 import Nav from './components/nav/Nav';
+import AddNewHamster from './components/gallery/AddNewHamster';
+import MatchWinners from './components/gallery/MatchWinners';
 import './App.css';
 import './index.css';
-import AddNewHamster from './components/gallery/AddNewHamster';
 
 function App() {
+
 	return (
+		
 		<Router>
     		<div className="app">
       			<header className="app-header">
@@ -27,6 +30,7 @@ function App() {
 			  			<Route path="/statistics"> <Statistics /> </Route>
 			  			<Route path="/history"> <History /> </Route>
 						  <Route path="/addnewhamster"> <AddNewHamster /> </Route>
+						  <Route path="/matchwinners"> <MatchWinners /> </Route>
 			  			<Route path="/"> <Start /> </Route>
 		  			</Switch>
 	  			</main>

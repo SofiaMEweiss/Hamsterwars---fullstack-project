@@ -4,7 +4,7 @@ const BattleHeader = () => (
 	<div className="battle-header">
 		<h2>BATTLE</h2>
 		<p>
-			Who is the cutest?
+			Click on the cutest hamster
 		</p>
 		<p>
 			Choose carefully

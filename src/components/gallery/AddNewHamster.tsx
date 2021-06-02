@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import './AddNewHamster.css';
 	 
@@ -106,7 +105,7 @@ const AddNewHamster = () => {
 			'games': 0
 		}
 	
-		const response = await fetch('/hamsters', {
+		await fetch('/hamsters', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(newHamster)
@@ -230,8 +229,7 @@ const AddNewHamster = () => {
 					{controlledLoves}
 				</p>
 				<p>
-					{/* <span>bild: </span> */}
-					<img src={controlledImgName} />
+					<img src={controlledImgName}alt="" />
 				</p>
 			</div>
 		</div>

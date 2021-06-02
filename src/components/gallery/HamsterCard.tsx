@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Hamster } from '../../types/Hamster'
 import HamsterInfo from './HamsterInfo';
@@ -19,7 +20,6 @@ const HamsterCard = () => {
 
 	async function removeHamster(id:string) {
 		await fetch("/hamsters/" + id, { method: 'DELETE' })
-		// window.location.reload() //Dålig lösning
 		getHamsters()
 	}
 
@@ -28,16 +28,21 @@ const HamsterCard = () => {
 			{hamsters ? 
 			hamsters.map(h =>(	
 			<section className="hamstercard" key={h.id}>
-				<img className="delete-hamster" onClick={() => removeHamster(h.id)} src="./img/remove.svg" alt="Image of a delete cross"/>
+				<img className="delete-hamster" onClick={() => removeHamster(h.id)} src="./img/remove.svg" alt="a delete cross"/>
 				{(h.imgName.startsWith('http')) ? 
-				<img className="hamstercard-img" src={h.imgName} alt="Image of a hamster" />
-				: <img className="hamstercard-img" src={`img/${h.imgName}`} alt="Image of a hamster" />}
+				<img className="hamstercard-img" src={h.imgName} alt="a hamster" />
+				: <img className="hamstercard-img" src={`img/${h.imgName}`} alt="a hamster" />}
 				<h3>
 					{h.name}
 				</h3>
+				<Link to="/matchwinners">
+					<p className="matchwinners-link">
+						Look at all of those I have defeated
+					</p>
+				</Link>
 				<HamsterInfo hamster ={h}/>
 			</section>)) 
-			: 'Hämtar hamstrar från API'}
+			: <div className="gallery-error-message"><p>Hämtar hamstrar från API</p></div>}
 		</div>	
 	)
 }

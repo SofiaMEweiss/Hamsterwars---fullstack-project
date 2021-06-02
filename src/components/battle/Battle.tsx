@@ -8,45 +8,40 @@ const Battle = () => {
 
 	const [randomHamster, setRandomHamster] = useState<null | Hamster>(null)
 	const [randomHamster2, setRandomHamster2] = useState<null | Hamster>(null)
-	// const [winner, setWinner] = useState<null | Hamster>(null)
 	const[allInfoIsVisible, setAllInfoIsVisible] = useState(false)
 	const[winnerLeft, setWinnerLeft] = useState(false)
 	const[winnerRight, setWinnerRight] = useState(false)
-
-		
+	
 	useEffect(() => {
 		async function getRandomHamster(random:any) {
-		const response = await fetch('/hamsters/random', {method: 'GET'})
-		const data: Hamster = await response.json()
-		random(data)
+			const response = await fetch('/hamsters/random', {method: 'GET'})
+			const data: Hamster = await response.json()
+			random(data)
 		}
 		getRandomHamster(setRandomHamster);
 		getRandomHamster(setRandomHamster2);	
 	}, [])
 
-	//UPPDATERING VINNANDE HAMSTERN
 	async function putWinnerHamster(winner: Hamster) {
 		const winnerUpdate = {
 			'wins': winner.wins + 1,
 			'games': winner.games + 1
 		}
 	
-		const response = await fetch("/hamsters/" + winner.id, {
+		await fetch("/hamsters/" + winner.id, {
 			method: 'PUT',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(winnerUpdate)
 		})	
 	}
 
-	//UPPDATERING FÖRLORANDE HAMSTERN
 	async function putLoserHamster(loser: Hamster) {
-	
 		const loserUpdate = {
 			'defeats': loser.defeats + 1,
 			'games': loser.games + 1
 		}
 		
-		const response = await fetch("/hamsters/" + loser.id, {
+		await fetch("/hamsters/" + loser.id, {
 			method: 'PUT',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(loserUpdate)
@@ -60,7 +55,7 @@ const Battle = () => {
 			'loserId': randomHamster2.id
 		}
 	
-		const response = await fetch('/matches', {
+		await fetch('/matches', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(newMatch)
@@ -74,18 +69,13 @@ const Battle = () => {
 			'loserId': randomHamster.id
 		}
 	
-		const response = await fetch('/matches', {
+		await fetch('/matches', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(newMatch)
 		})	
 	}
-		//Steg 1 - visa wins & defeat
-		//Steg 2 - anropa update-funktion för winner som uppdatera wins & defeats
-		//Steg 2b - uppdatera frontenden med uppdateringen av wins/defeats
-		//Steg 3 - Skapa likadan funktion fast för loser
-		//Steg 4 - Byt plats. Så wins och defeats uppdateras först och sen visas
-		//Steg 5 - Posta ny match.
+
 		const randomHamsterLeft = () => {
 			if (!randomHamster || !randomHamster2) return
 			setAllInfoIsVisible( true )
@@ -119,8 +109,8 @@ const Battle = () => {
 				{randomHamster ? 
 				<div key={randomHamster.id} onClick={randomHamsterLeft}>
 					{(randomHamster.imgName.startsWith('http')) ? 
-					<img src={randomHamster.imgName}alt="Image of a hamster" />
-					: <img src={`img/${randomHamster.imgName}`}alt="Image of a hamster" />}
+					<img src={randomHamster.imgName}alt="a hamster" />
+					: <img src={`img/${randomHamster.imgName}`}alt="a hamster" />}
 					<h4>
 						{ randomHamster.name}
 					</h4>
@@ -136,28 +126,28 @@ const Battle = () => {
 					{allInfoIsVisible ? 
 					<div>
 						<p>
+						{winnerLeft ? <h4>LOSER</h4> : <h4>WINNER</h4>}
+						</p>
+						<p>
 							<span>Wins:</span> {randomHamster.wins}
 						</p> 
 						<p>
 							<span>Defeats:</span> {randomHamster.defeats}
 						</p>
-						<p>
-						{winnerLeft ? 'LOSER' : 'WINNER'}
-						</p>
 					</div>
 					: ''}
 				</div> 
-				: 'Hämtar random hamster från API'}
+				: <div className="battle-error-message"><p>Hämtar slumpad hamster från API</p></div>}
 				<div className="vs-container"><h3>VS</h3>
 					<button onClick={() => window.location.reload()}>
-						Skip Battle
+						Next Battle
 					</button>
 				</div>
 				{randomHamster2 ? 
 				<div key={randomHamster2.id} onClick={randomHamsterRight}>
 					{(randomHamster2.imgName.startsWith('http')) ? 
-					<img src={randomHamster2.imgName}alt="Image of a hamster" />
-					: <img src={`img/${randomHamster2.imgName}`}alt="Image of a hamster" />}
+					<img src={randomHamster2.imgName}alt="a hamster" />
+					: <img src={`img/${randomHamster2.imgName}`}alt="a hamster" />}
 					<h4>
 					{ randomHamster2.name}
 					</h4>
@@ -173,18 +163,18 @@ const Battle = () => {
 					{allInfoIsVisible ?
 					<div>
 						<p>
+							{winnerRight ? <h4>LOSER</h4> : <h4>WINNER</h4>}
+						</p>
+						<p>
 							<span>Wins:</span> {randomHamster2.wins}
 						</p> 
 						<p>
 							<span>Defeats:</span> {randomHamster2.defeats}
 						</p>
-						<p>
-						{winnerRight ? 'LOSER' : 'WINNER'}
-						</p>
 					</div>
 					: ''}
 				</div> 
-				: 'Hämtar random hamster från API'}
+				: <div className="battle-error-message"><p>Hämtar slumpad hamster från API</p></div>}
 			</div>	
 		</div>
 	)

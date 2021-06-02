@@ -2,5 +2,4 @@
 	flex: 1 1 auto;
 	display: flex;
 	background-color: var(--background-color);
-	/* border: red solid 1px; */
 }

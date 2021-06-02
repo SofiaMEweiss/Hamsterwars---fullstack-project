@@ -2,15 +2,14 @@ import './StatisticsHeader.css';
 
 const StatisticsHeader = () => {
 
-
 	return (
 		<div className="statistics-header">
 		<h2>Statistics</h2>
 		<p>
-			Winner vs Losers
+			The cutest of the cutest
 		</p>
 		<p>
-		How is your favorite?
+			and the defeated
 		</p>
 	</div>
 	)

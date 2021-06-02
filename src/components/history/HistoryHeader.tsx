@@ -7,10 +7,10 @@ const History = () => {
 		<div className="history-header">
 		<h2>History</h2>
 		<p>
-			So many battles
+			Look so many battles
 		</p>
 		<p>
-		Can you find your?
+			hamster wars
 		</p>
 	</div>
 	)

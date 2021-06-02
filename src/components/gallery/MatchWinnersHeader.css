@@ -1,12 +1,12 @@
-.battle-header {
+.matchwinners-header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 5%;
+	margin-top: 5%;
 	color: var(--primary-color);
 }
 
-.battle-header h2 {
+.matchwinners-header h2 {
 	font-family: var(--heading-font-family);
 	color: var(--primary-color);
 	font-size: 3.5em;
@@ -14,13 +14,13 @@
 	text-transform: uppercase;
 }
 
-.battle-header p {
+.matchwinners-header p {
 	font-family: var(--paragraph-font-familiy);
 	color: var(--secondary-color);
 	text-align: center;
 }
 
-.battle-header p:nth-child(even) {
+.matchwinners-header p:nth-child(even) {
 	font-style: italic;
 	font-weight: lighter;
 }

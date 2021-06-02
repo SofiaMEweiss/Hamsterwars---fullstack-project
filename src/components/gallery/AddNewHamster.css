@@ -5,25 +5,21 @@
 	margin: 5%;
 	background-color: var(--background-color);
 	text-align: left;
-	/* border: 1px solid red; */
 }
 
 .add-new-hamster-container .form-container {
 	display: flex;
 	flex: 1 1 auto;
 	flex-direction: column;
-	/* border: 1px solid blue; */
 }
 
 .preview-container {
 	display: flex;
 	flex-direction: column;
-	/* border: 1px solid yellow; */
 }
 
 .add-new-hamster-container section {
 	margin: 1em;
-	/* border: 1px solid green; */
 }
 
 .add-new-hamster-container h3 {

@@ -2,7 +2,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* border: black solid 1px; */
 }
 
 .hamster-info-container button {
@@ -33,5 +32,3 @@
 .hamster-info span {
 	font-weight: bold;
 }
-
-

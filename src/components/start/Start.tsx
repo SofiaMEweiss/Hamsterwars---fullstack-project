@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Hamster } from '../../types/Hamster'
 import ErrorHandling from './ErrorHandling';
 import StartContent from './StartContent';
 import './Start.css';

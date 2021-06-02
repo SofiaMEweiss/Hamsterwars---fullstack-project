@@ -2,7 +2,6 @@
 	display: flex;
 	flex: 1 1 auto;
 	flex-direction: row;
-	/* border: red solid 1px; */
 }
 
 .start-container section {
@@ -11,7 +10,6 @@
 	justify-content: center;
 	margin: 0px;
 	border: 0;
-	/* border: green solid 1px; */
 }
 
 .start-container .left-section {

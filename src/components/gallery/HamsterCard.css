@@ -1,8 +1,6 @@
-
 .hamster-container {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	/* border: yellow solid 1px; */
 }
 
 .hamstercard {
@@ -13,7 +11,6 @@
 	padding: 1em;
 	border-radius: 2em;
 	background-color: var(--primary-color);
-	/* border: var(--primary-color) solid 2px; */
 }
 
 .hamster-container .delete-hamster {
@@ -35,4 +32,21 @@
 	font-size: 2em;
 	font-weight: lighter;
 	text-transform: uppercase;	
+}
+
+.hamstercard p {
+	color: var(--background-color);
+	font-family: var(--paragraph-font-familiy);
+	font-weight: bold;
+	/* text-decoration: underline; */
+}
+
+.matchwinners-link {
+	text-decoration: underline;
+}
+
+.gallery-error-message {
+	font-family: var(--paragraph-font-familiy);
+	color: var(--primary-color);
+	font-weight: bold;
 }

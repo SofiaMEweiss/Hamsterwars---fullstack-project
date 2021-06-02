@@ -10,8 +10,7 @@ const Statistics = () => {
 
 	useEffect(() => {
 		getWinners()
-		getLosers()
-		// getHamsterById()	
+		getLosers()	
 	}, [])
 
 	async function getWinners() {
@@ -27,34 +26,33 @@ const Statistics = () => {
 	}
 
 	return (
-	<div className="statistics-container">
-		<StatisticsHeader />
-		
-		<div className="winner-container">
-			<h3>TOP 5 winners</h3>
-		{winners ? 
-			winners.map(w =>(	
-			<section className="top-fivecard" key={w.id2}>
-				{(w.imgName.startsWith('http')) ? 
-				<img className="winner-img" src={w.imgName} alt="Image of a hamster" />
-				: <img className="winner-img" src={`img/${w.imgName}`} alt="Image of a hamster" />}
-				<h4>
-					{w.name}
-				</h4>
-				<p>
-					<span>Wins:</span> {w.wins}
-				</p>
-			</section>)) 
-			: 'Hämtar hamstrar från API'}
-		</div>
-		<div className="winner-container">
-		<h3>TOP 5 Losers</h3>
-		{losers ? 
+		<div className="statistics-container">
+			<StatisticsHeader />
+			<div className="winner-container">
+				<h3>TOP 5 winners</h3>
+			{winners ? 
+				winners.map(w =>(	
+				<section className="top-fivecard" key={w.id2}>
+					{(w.imgName.startsWith('http')) ? 
+					<img className="winner-img" src={w.imgName} alt="a hamster" />
+					: <img className="winner-img" src={`img/${w.imgName}`} alt="a hamster" />}
+					<h4>
+						{w.name}
+					</h4>
+					<p>
+						<span>Wins:</span> {w.wins}
+					</p>
+				</section>)) 
+				: 'Hämta de 5 hamstar med flest vinster'}
+			</div>
+			<div className="winner-container">
+				<h3>TOP 5 Losers</h3>
+				{losers ? 
 			losers.map(l =>(	
-			<section className="top-fivecard" key={l.id2}>
+				<section className="top-fivecard" key={l.id2}>
 				{(l.imgName.startsWith('http')) ? 
-				<img className="winner-img" src={l.imgName} alt="Image of a hamster" />
-				: <img className="winner-img" src={`img/${l.imgName}`} alt="Image of a hamster" />}
+				<img className="winner-img" src={l.imgName} alt="a hamster" />
+				: <img className="winner-img" src={`img/${l.imgName}`} alt="a hamster" />}
 				<h4>
 					{l.name}
 				</h4>
@@ -62,12 +60,10 @@ const Statistics = () => {
 					<span>Defeats:</span> {l.defeats}
 				</p>
 			</section>)) 
-			: 'Hämtar hamstrar från API'}
+			: 'Hämta de 5 hamstar med flest förluster'}
+			</div>
 		</div>
-		</div>
-		
-		
-
-)}
+	)
+}
 
 export default Statistics;

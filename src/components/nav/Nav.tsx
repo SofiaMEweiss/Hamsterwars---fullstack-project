@@ -8,7 +8,7 @@ const Nav = () => (
 		<Link to="/gallery">Gallery</Link>
 		<Link to="/statistics">Top 5</Link>
 		<Link to="/history">All matches</Link>
-		<img src="./img/hamsterlogo.svg" alt="Image of a hamster with angry eyes"/>
+		<img src="./img/hamsterlogo.svg" alt="a hamster with angry eyes"/>
 	</nav>
 )
 

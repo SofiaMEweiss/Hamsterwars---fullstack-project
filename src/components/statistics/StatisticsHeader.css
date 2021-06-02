@@ -19,7 +19,6 @@
 	font-family: var(--paragraph-font-familiy);
 	color: var(--secondary-color);
 	text-align: center;
-	/* border: red solid 1px; */
 }
 
 .statistics-header p:nth-child(even) {

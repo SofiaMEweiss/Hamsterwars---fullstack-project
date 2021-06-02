@@ -1,13 +1,12 @@
 import HistoryHeader from './HistoryHeader';
 import { useEffect, useState } from 'react';
 import { Matches } from '../../types/Matches'
-import { Hamster } from '../../types/Hamster'
 import './History.css';
 
 const History = () => {
 
 	const [matches, setMatches] = useState<null | Matches[]>(null)
-	const [hamsterById, setHamsterById] = useState<null | Hamster>(null)
+	// const [hamsterById, setHamsterById] = useState<null | Hamster>(null)
 	
 	useEffect(() => {
 		getMatches()
@@ -54,7 +53,7 @@ const History = () => {
 
 				return (	
 			<section className="historycard" key={m.id}>
-				<img className="delete-history" onClick={() => removeMatch(m.id)} src="./img/remove.svg" alt="Image of a delete cross"/>
+				<img className="delete-history" onClick={() => removeMatch(m.id)} src="./img/remove.svg" alt="a delete cross"/>
 				<h3>
 					winnerid: {m.winnerId}
 					{/* winner.id */}

@@ -13,7 +13,7 @@ const Battle = () => {
 	const[winnerRight, setWinnerRight] = useState(false)
 	
 	useEffect(() => {
-		async function getRandomHamster(random:any) {
+		async function getRandomHamster(random:(data:Hamster)=>void) {
 			const response = await fetch('/hamsters/random', {method: 'GET'})
 			const data: Hamster = await response.json()
 			random(data)
@@ -21,6 +21,11 @@ const Battle = () => {
 		getRandomHamster(setRandomHamster);
 		getRandomHamster(setRandomHamster2);	
 	}, [])
+
+	// async function getRandomHamster2(random: (data:Hamster)=>void) {
+	// 	const response = await fetch('/hamsters/random', {method: 'GET'})
+	// 	const data: Hamster = await response.json()
+	// 	random(data)
 
 	async function putWinnerHamster(winner: Hamster) {
 		const winnerUpdate = {

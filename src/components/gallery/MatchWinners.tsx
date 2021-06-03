@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import MatchWinnersHeader from './MatchWinnersHeader';
 import { Matches } from '../../types/Matches'
+import { Hamster } from '../../types/Hamster'
 import './MatchWinners.css';
-
-
 
 const MatchWinners = () => {
 

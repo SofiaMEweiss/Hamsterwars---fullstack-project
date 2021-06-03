@@ -5,12 +5,12 @@ const History = () => {
 
 	return (
 		<div className="history-header">
-		<h2>History</h2>
+		<h2 className="history-heading">History</h2>
 		<p>
 			Look so many battles
 		</p>
 		<p>
-			hamster wars
+		all are unique
 		</p>
 	</div>
 	)

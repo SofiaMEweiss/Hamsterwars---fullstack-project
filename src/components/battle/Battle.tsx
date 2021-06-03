@@ -22,10 +22,18 @@ const Battle = () => {
 		getRandomHamster(setRandomHamster2);	
 	}, [])
 
-	// async function getRandomHamster2(random: (data:Hamster)=>void) {
-	// 	const response = await fetch('/hamsters/random', {method: 'GET'})
-	// 	const data: Hamster = await response.json()
-	// 	random(data)
+	
+	const nextBattle = () => {
+		setAllInfoIsVisible(false)
+		async function getRandomHamster(random:(data:Hamster)=>void) {
+			const response = await fetch('/hamsters/random', {method: 'GET'})
+			const data: Hamster = await response.json()
+			random(data)
+		}
+		getRandomHamster(setRandomHamster);
+		getRandomHamster(setRandomHamster2);
+
+	};
 
 	async function putWinnerHamster(winner: Hamster) {
 		const winnerUpdate = {
@@ -144,7 +152,7 @@ const Battle = () => {
 				</div> 
 				: <div className="battle-error-message"><p>Hämtar slumpad hamster från API</p></div>}
 				<div className="vs-container"><h3>VS</h3>
-					<button onClick={() => window.location.reload()}>
+					<button onClick={() => nextBattle()}>
 						Next Battle
 					</button>
 				</div>

@@ -6,7 +6,7 @@
 	color: var(--primary-color);
 }
 
-.history-header h2 {
+.history-header .history-heading {
 	font-family: var(--heading-font-family);
 	color: var(--primary-color);
 	font-size: 3.5em;

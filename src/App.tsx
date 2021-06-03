@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+// import { useEffect, useState } from 'react';
+// import { Hamster } from './types/Hamster'
 import Gallery from './components/gallery/Gallery';
 import Battle from './components/battle/Battle';
 import Statistics from './components/statistics/Statistics';
@@ -11,7 +13,23 @@ import MatchWinners from './components/gallery/MatchWinners';
 import './App.css';
 import './index.css';
 
+// interface Props {
+// 	hamster: Hamster[]
+// }
+
 function App() {
+
+	// const [hamsters, setHamsters] = useState<null | Hamster[]>(null)
+	
+	// useEffect(() => {
+	// 	getHamsters()	
+	// }, [])
+
+	// async function getHamsters() {
+	// 	const response = await fetch('/hamsters', {method: 'GET'})
+	// 	const data: Hamster[] = await response.json()
+	// 	setHamsters(data)	
+	// }
 
 	return (
 		

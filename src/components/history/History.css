@@ -19,8 +19,23 @@
 	border-radius: 2em;
 	background-color: var(--primary-color);
 }
+.history-container h2 {
+	font-family: var(--heading-font-family);
+	color: var(--background-color);
+	font-size: 3em;
+	font-weight: lighter;
+	text-transform: uppercase;
+	}
 
 .history-container h3 {
+font-family: var(--heading-font-family);
+color: var(--background-color);
+font-size: 2em;
+font-weight: lighter;
+text-transform: uppercase;
+}
+
+.history-container h4 {
 	margin-bottom: 1em;
 	font-family: var(--paragraph-font-familiy);
 }
@@ -30,4 +45,14 @@
 	width: 10%;
 	padding: 1em;
 	cursor: pointer;
+}
+
+.history-container .hamstercard-img {
+	height: 15vh;
+	border-radius: 1em;
+	border: var(--background-color) solid 2px;
+}
+
+.error-img {
+	height: 20vh;
 }

@@ -1,15 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Hamster } from '../../types/Hamster'
+// import { Matches } from '../../types/Matches'
 import HamsterInfo from './HamsterInfo';
 import './HamsterCard.css';
 
 const HamsterCard = () => {
 	const [hamsters, setHamsters] = useState<null | Hamster[]>(null)
+	// const [losers, setLosers] = useState<null | Matches[]>(null)
+	// const [matches, setMatches] = useState<null | Matches[]>(null);
+	// const[showDefeated, setShowDefeated] = useState(false)
+	// let maybeDefeatedInfo:any = null
 	
 	useEffect(() => {
-		getHamsters()	
+		getHamsters()
+		
 	}, [])
 
 	async function getHamsters() {
@@ -22,6 +27,18 @@ const HamsterCard = () => {
 		await fetch("/hamsters/" + id, { method: 'DELETE' })
 		getHamsters()
 	}
+	
+
+	// if ( showDefeated ) {
+	// 	maybeDefeatedInfo = (
+	// 		<div className="hamster-info" >
+	// 			Visa upp besegrade hamstrar
+	// 		</div>
+	// 	)
+	// }
+
+	// const toggleVisibility = () => {
+	// 	setShowDefeated( !showDefeated )
 
 	return (
 		<div className="hamster-container">
@@ -35,12 +52,11 @@ const HamsterCard = () => {
 				<h3>
 					{h.name}
 				</h3>
-				<Link to="/matchwinners">
-					<p className="matchwinners-link">
-						Look at all of those I have defeated
-					</p>
-				</Link>
-				<HamsterInfo hamster ={h}/>
+				{/* <p className="matchwinners-link" onClick={toggleVisibility}>
+					{showDefeated ? 'Defeated' : 'Look at all of those I have defeated'}
+				</p>
+				{maybeDefeatedInfo} */}
+				<HamsterInfo hamster ={h} />
 			</section>)) 
 			: <div className="gallery-error-message"><p>Hämtar hamstrar från API</p></div>}
 		</div>	

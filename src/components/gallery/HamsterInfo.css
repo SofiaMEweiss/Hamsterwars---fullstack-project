@@ -32,3 +32,13 @@
 .hamster-info span {
 	font-weight: bold;
 }
+
+.defeated.img {
+	height: 1em;
+	justify-content: center;
+}
+
+.matchwinners-link {
+	/* text-decoration: underline; */
+	cursor: pointer;
+}

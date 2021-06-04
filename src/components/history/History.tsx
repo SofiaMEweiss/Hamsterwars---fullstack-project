@@ -36,7 +36,7 @@ const History = () => {
       <div className="matches-container">
         {matches
           ? matches.map((m) => {
-              if (!hamsters) return;
+              if (!hamsters) return 
               const winner = hamsters.find(
                 (hamster) => hamster.id === m.winnerId
               );
@@ -58,13 +58,11 @@ const History = () => {
                   </section>
                 );
 
-              if (!hamsters) return;
+              if (!hamsters) return
               const loser = hamsters.find(
                 (hamster) => hamster.id === m.loserId
               );
               if (!loser) return "";
-
-              console.log(winner);
 
               return (
                 <section className="historycard" key={m.id}>
@@ -108,7 +106,7 @@ const History = () => {
                 </section>
               );
             })
-          : "Hämtar matcher från API"}
+          : <div className="history-error-message"><p>Hämtar matcher från API</p></div>}
       </div>
     </div>
   );

@@ -43,7 +43,7 @@ const Statistics = () => {
 						<span>Wins:</span> {w.wins}
 					</p>
 				</section>)) 
-				: 'Hämta de 5 hamstar med flest vinster'}
+				: <div className="statistics-error-message"><p>Hämta de 5 hamstar med flest vinster</p></div>}
 			</div>
 			<div className="winner-container">
 				<h3>TOP 5 Losers</h3>
@@ -60,7 +60,7 @@ const Statistics = () => {
 					<span>Defeats:</span> {l.defeats}
 				</p>
 			</section>)) 
-			: 'Hämta de 5 hamstar med flest förluster'}
+			: <div className="statistics-error-message"><p>Hämta de 5 hamstar med flest förluster</p></div>}
 			</div>
 		</div>
 	)

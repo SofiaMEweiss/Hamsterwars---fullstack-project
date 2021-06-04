@@ -56,3 +56,9 @@ text-transform: uppercase;
 .error-img {
 	height: 20vh;
 }
+
+.history-error-message {
+	font-family: var(--paragraph-font-familiy);
+	color: var(--primary-color);
+	font-weight: bold;
+}

@@ -25,6 +25,9 @@ const Battle = () => {
 	
 	const nextBattle = () => {
 		setAllInfoIsVisible(false)
+		setWinnerLeft(false)
+		setWinnerRight(false)
+
 		async function getRandomHamster(random:(data:Hamster)=>void) {
 			const response = await fetch('/hamsters/random', {method: 'GET'})
 			const data: Hamster = await response.json()
@@ -32,7 +35,6 @@ const Battle = () => {
 		}
 		getRandomHamster(setRandomHamster);
 		getRandomHamster(setRandomHamster2);
-
 	};
 
 	async function putWinnerHamster(winner: Hamster) {

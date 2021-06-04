@@ -1,7 +1,6 @@
 .gallery-container {
-	display: flex;
-	flex-direction: column;
-	padding: 0px 10%;
-	background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10%;
+  background-color: var(--background-color);
 }
-

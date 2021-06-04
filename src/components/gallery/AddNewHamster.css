@@ -1,104 +1,104 @@
 .add-new-hamster-container {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 0px 4em;
-	margin: 5%;
-	background-color: var(--background-color);
-	text-align: left;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 4em;
+  margin: 5%;
+  background-color: var(--background-color);
+  text-align: left;
 }
 
 .add-new-hamster-container .form-container {
-	display: flex;
-	flex: 1 1 auto;
-	flex-direction: column;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
 }
 
 .preview-container {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .add-new-hamster-container section {
-	margin: 1em;
+  margin: 1em;
 }
 
 .add-new-hamster-container h3 {
-	font-family: var(--heading-font-family);
-	color: var(--primary-color);
-	font-size: 2em;
-	font-weight: lighter;
-	text-transform: uppercase;
+  font-family: var(--heading-font-family);
+  color: var(--primary-color);
+  font-size: 2em;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
 .add-new-hamster-container label {
-	color: var(--secondary-color);
-	font-family: var(--paragraph-font-familiy);
-	font-size: 0.9em;
-	font-weight: bold;
+  color: var(--secondary-color);
+  font-family: var(--paragraph-font-familiy);
+  font-size: 0.9em;
+  font-weight: bold;
 }
 
 .add-new-hamster-container input {
-	width: 50%;
-	padding-left: 0.5em; 
-	border-radius: 0.3em;
-	border-width: 3px;
-	font-size: 1.1em;
+  width: 50%;
+  padding-left: 0.5em;
+  border-radius: 0.3em;
+  border-width: 3px;
+  font-size: 1.1em;
 }
 
 .add-new-hamster-container .message-hidden {
-	position: absolute;
-	padding-top: 0.2em;
-	font-family: var(--paragraph-font-familiy);
-	color: var(--error-color);
-	font-weight: bold;
+  position: absolute;
+  padding-top: 0.2em;
+  font-family: var(--paragraph-font-familiy);
+  color: var(--error-color);
+  font-weight: bold;
 }
 
 .add-new-hamster-container .error {
-	border-color: var(--error-color);
+  border-color: var(--error-color);
 }
 
 .add-new-hamster-container .valid {
-	border-color: var(--valid-color);
+  border-color: var(--valid-color);
 }
 
 .add-new-hamster-container button {
-	width: 14.5em;
-	margin: 1em;
-	padding: 0.8em 1.2em;
-	border-radius: 5em;
-	border: none;
-	background-color: var(--primary-color);
-	color: var(--secondary-color);
-	font-family: var(--heading-font-family);
-	font-size: 1em;
-	font-weight: lighter;
+  width: 14.5em;
+  margin: 1em;
+  padding: 0.8em 1.2em;
+  border-radius: 5em;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: var(--heading-font-family);
+  font-size: 1em;
+  font-weight: lighter;
 }
 
 .add-new-hamster-container button:hover {
-	background-color: var(--hover-color);
-	cursor: pointer;
-	transform: translateY(-4px);
+  background-color: var(--hover-color);
+  cursor: pointer;
+  transform: translateY(-4px);
 }
 
 .add-new-hamster-container button:disabled {
-	background-color: var(--secondary-color);
-	color: var(--background-color);
-	transform: none;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  transform: none;
 }
 
 .add-new-hamster-container span {
-	font-family: var(--paragraph-font-familiy);
-	color: var(--secondary-color);
-	font-weight: bold;
+  font-family: var(--paragraph-font-familiy);
+  color: var(--secondary-color);
+  font-weight: bold;
 }
 
 .add-new-hamster-container p {
-	padding: 1em 0px;
-	font-family: var(--paragraph-font-familiy);
-	color: var(--secondary-color);
+  padding: 1em 0px;
+  font-family: var(--paragraph-font-familiy);
+  color: var(--secondary-color);
 }
 
 .add-new-hamster-container img {
-	width: 20em;
-	border-radius: 1em;
+  width: 20em;
+  border-radius: 1em;
 }

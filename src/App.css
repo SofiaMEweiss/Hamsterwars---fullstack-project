@@ -1,32 +1,30 @@
 .app {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-header {
-	display: flex;
-	flex-direction: column;
-	flex: 0 0 auto;
-	align-items: flex-end;
-	justify-content: center;
-	padding: 0.5em;
-	/*Den ska ha den storlek den behöver = auto, men den ska inte kunna ändra storlek = 0 0*/
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0.5em;
+  /*Den ska ha den storlek den behöver = auto, men den ska inte kunna ändra storlek = 0 0*/
 }
 
 header {
-	flex: 0 0 auto;
-	padding: 0.5em;
-	background-color: var(--background-color);
-	/*Den ska ha den storlek den behöver = auto, men den ska inte kunna ändra storlek = 0 0*/
+  flex: 0 0 auto;
+  padding: 0.5em;
+  background-color: var(--background-color);
+  /*Den ska ha den storlek den behöver = auto, men den ska inte kunna ändra storlek = 0 0*/
 }
 
 main {
-	display: flex;
-	flex: 1 1 auto;
-	justify-content: center;
-	background-color: var(--background-color);
-	/* Den får skala om sig ganska fritt, den får ta resten av utrymmet. 1 1 -> flex grow flex shrink(växer över den storleken som den behöver, utgår ifrån den storleken den behöver (har man ett annat element med 2 2 auto så kommer den vara dubbelt så stor om de har samma innehåll) och auto så får den ta så mkt som den behöver.*/
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  background-color: var(--background-color);
+  /* Den får skala om sig ganska fritt, den får ta resten av utrymmet. 1 1 -> flex grow flex shrink(växer över den storleken som den behöver, utgår ifrån den storleken den behöver (har man ett annat element med 2 2 auto så kommer den vara dubbelt så stor om de har samma innehåll) och auto så får den ta så mkt som den behöver.*/
 }
-
-

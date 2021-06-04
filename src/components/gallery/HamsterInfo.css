@@ -1,44 +1,59 @@
 .hamster-info-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hamster-info-container button {
-	width: 13em;
-	margin-bottom: 1em;
-	padding: 0.8em 1.2em;
-	margin-top: 1em;
-	border-radius: 2em;
-	border: none;
-	background-color: var(--background-color);
-	color: var(--secondary-color);
-	font-family: var(--paragraph-font-familiy);
-	font-size: 1em;
-	font-weight: lighter;
+  width: 13em;
+  margin-bottom: 1em;
+  padding: 0.8em 1.2em;
+  margin-top: 1em;
+  border-radius: 2em;
+  border: none;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  font-family: var(--paragraph-font-familiy);
+  font-size: 1em;
+  font-weight: lighter;
 }
 
 .hamster-info-container button:hover {
-	background-color: var(--hover-color);
-	cursor: pointer;
-	transform: translateY(-4px);
+  background-color: var(--hover-color);
+  cursor: pointer;
+  transform: translateY(-4px);
 }
 
 .hamster-info p {
-	margin-bottom: 1em;
-	font-family: var(--paragraph-font-familiy);
+  margin-bottom: 1em;
+  font-family: var(--paragraph-font-familiy);
 }
 
 .hamster-info span {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .defeated.img {
-	height: 1em;
-	justify-content: center;
+  height: 1em;
+  justify-content: center;
 }
 
 .matchwinners-link {
-	/* text-decoration: underline; */
-	cursor: pointer;
+  background-color: var(--hover-color);
+}
+
+.matchwinners-link:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+
+.error-defeated {
+	height: 1em;
+	justify-content: center;
+	font-family: var(--paragraph-font-familiy);
+	font-weight: bold;
+	border: solid black 1px;
+	padding: 1em;
+	margin: 0.5em 0px;
+	border-radius: 1em;
 }

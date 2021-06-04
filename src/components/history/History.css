@@ -1,64 +1,64 @@
 .history-container {
-	display: grid;
-	grid-template-columns: repeat(2 1fr);
-	padding: 0px 10%;
-	background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+  padding: 0px 10%;
+  background-color: var(--background-color);
 }
 
 .matches-container {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .historycard {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 1em;
-	padding: 1em;
-	border-radius: 2em;
-	background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 2em;
+  background-color: var(--primary-color);
 }
 .history-container h2 {
-	font-family: var(--heading-font-family);
-	color: var(--background-color);
-	font-size: 3em;
-	font-weight: lighter;
-	text-transform: uppercase;
-	}
+  font-family: var(--heading-font-family);
+  color: var(--background-color);
+  font-size: 3em;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
 
 .history-container h3 {
-font-family: var(--heading-font-family);
-color: var(--background-color);
-font-size: 2em;
-font-weight: lighter;
-text-transform: uppercase;
+  font-family: var(--heading-font-family);
+  color: var(--background-color);
+  font-size: 2em;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
 .history-container h4 {
-	margin-bottom: 1em;
-	font-family: var(--paragraph-font-familiy);
+  margin-bottom: 1em;
+  font-family: var(--paragraph-font-familiy);
 }
 
 .history-container .delete-history {
-	align-self: flex-end;
-	width: 10%;
-	padding: 1em;
-	cursor: pointer;
+  align-self: flex-end;
+  width: 10%;
+  padding: 1em;
+  cursor: pointer;
 }
 
 .history-container .hamstercard-img {
-	height: 15vh;
-	border-radius: 1em;
-	border: var(--background-color) solid 2px;
+  height: 15vh;
+  border-radius: 1em;
+  border: var(--background-color) solid 2px;
 }
 
 .error-img {
-	height: 20vh;
+  height: 20vh;
 }
 
 .history-error-message {
-	font-family: var(--paragraph-font-familiy);
-	color: var(--primary-color);
-	font-weight: bold;
+  font-family: var(--paragraph-font-familiy);
+  color: var(--primary-color);
+  font-weight: bold;
 }

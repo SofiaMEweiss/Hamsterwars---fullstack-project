@@ -1,28 +1,28 @@
 .nav-container {
-	display: flex;
+  display: flex;
 }
 
 .nav-container a {
-	padding: 0.2em 1.5em;
-	font-family: var(--paragraph-font-familiy);
-	color: var(--primary-color);
-	font-size: 1.5em;
-	font-weight:300;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
+  padding: 0.2em 1.5em;
+  font-family: var(--paragraph-font-familiy);
+  color: var(--primary-color);
+  font-size: 1.5em;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .nav-container a:hover {
-	color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .nav-container img:hover {
-	transform: rotate(360deg)
+  transform: rotate(360deg);
 }
 
 .nav-container img {
-	width: 2.5em;
-	padding: 0 1em;
-	transition: all .5s ease-in-out;
+  width: 2.5em;
+  padding: 0 1em;
+  transition: all 0.5s ease-in-out;
 }

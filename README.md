@@ -1,3 +1,6 @@
+# Till David
+Jag har kompletterat med att knappen fungerar i battle, historik över matcher, statistik för top fem vinnare & top 5 förlorare samt att man under "show more info" i galleriet kan klicka så att man ser en bild över alla hamstrar som den besegrat om det finns några.
+
 # Hamsterwars
 Detta fullstack projekt är en examinerande skoluppgift i kursen effektiv frontendutveckling på IT-högskolan. För att utveckla denna app har React, TypeScript och node.js används som tekniker och verktyg. Det är publicerats med heroku på https://hamsterwars-fullstack-project.herokuapp.com/
 

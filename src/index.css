@@ -1,23 +1,18 @@
 :root {
-	--error-color: #CE2B1C;
-	--valid-color: #249919;
-	--primary-color: #A15C64;
-	--secondary-color: #d6d6d6;
-	--hover-color: #9b4d56;
-	--background-color: #0E0D0D;
-	--heading-font-family: 'Rock Salt', cursive;
-	--paragraph-font-familiy: 'Roboto', sans-serif;
+  --error-color: #ce2b1c;
+  --valid-color: #249919;
+  --primary-color: #a15c64;
+  --secondary-color: #d6d6d6;
+  --hover-color: #9b4d56;
+  --background-color: #0e0d0d;
+  --heading-font-family: "Rock Salt", cursive;
+  --paragraph-font-familiy: "Roboto", sans-serif;
 }
 
 * {
-	margin: 0px;
+  margin: 0px;
 }
 
 body {
   margin: 0;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

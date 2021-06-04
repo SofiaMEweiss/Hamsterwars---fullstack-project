@@ -25,13 +25,13 @@ const HamsterInfo = ({ hamster }: Props) => {
         <div className="hamster-info">
           {losers
             ? losers.map((loser) => {
+				
                 if (!localHamsters) return "No hamster";
-
                 let matching = localHamsters.find(
                   ({ id }) => id === loser.loserId
                 );
 
-                if (!matching) return <div className="error-defeated">Besegrad hamster finns ej längre</div>;
+                if (!matching) return <div className="error-defeated">Defeated does not exist anymore</div>;
                 return (
                   <div key={matching.id}>
                     {/* {matching.name} */}

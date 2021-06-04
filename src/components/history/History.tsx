@@ -36,7 +36,7 @@ const History = () => {
       <div className="matches-container">
         {matches ? (
           matches.map((m) => {
-            if (!hamsters) return
+            if (!hamsters) return 
             const winner = hamsters.find(
               (hamster) => hamster.id === m.winnerId
             );

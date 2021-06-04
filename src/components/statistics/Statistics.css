@@ -54,7 +54,7 @@
   font-weight: bold;
 }
 
-.winner-container .statistics-error-message {
+.winner-container .statistics-error-message p{
   font-family: var(--paragraph-font-familiy);
   color: var(--primary-color);
   font-weight: bold;
